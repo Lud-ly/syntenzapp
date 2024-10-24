@@ -20,14 +20,10 @@ export async function generateStaticParams() {
 // Mise à jour de la fonction RootLayout en utilisant params
 export default async function RootLayout({
   children,
-  params,
 }: {
   children: React.ReactNode;
-  params: { lang: string }; // Assurez-vous que le type est correct
 }) {
-  // Utilisez params si nécessaire
-  console.log(`Langue actuelle: ${params.lang}`);
-
+ 
   return (
     <html suppressHydrationWarning={true}>
       <body className={inter.className} data-cz-shortcut-listen="true">
