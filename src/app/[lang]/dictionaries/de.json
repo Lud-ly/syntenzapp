@@ -1,0 +1,12 @@
+{
+  "page": {
+    "language": "de",
+    "title": "DevOps Einführung",
+    "desc": "Verstehen der DevOps-Kultur und ihrer Bedeutung in der modernen Softwareentwicklung."
+  },
+  "home": {
+    "language": "de",
+    "title": "Willkommen bei DevOps",
+    "desc": "Dies ist ein Beispiel für eine DevOps-Einführung."
+  }
+}

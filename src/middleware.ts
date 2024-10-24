@@ -2,7 +2,8 @@ import Negotiator from "negotiator";
 import { match } from "@formatjs/intl-localematcher";
 import { NextRequest, NextResponse } from "next/server";
 
-const locales = ["en", "zh"];
+const locales = ["en", "zh", "fr", "es", "pt", "de", "ja"];
+
 const defaultLocale = "en";
 const cookieName = "i18nlang";
 
@@ -22,6 +23,8 @@ function getLocale(request: NextRequest): string {
 
 export function middleware(request: NextRequest) {
   if (request.nextUrl.pathname.startsWith("/_next")) return NextResponse.next();
+  if (request.nextUrl.pathname.startsWith("/flags")) return NextResponse.next();
+
 
   // Check if there is any supported locale in the pathname
   const { pathname } = request.nextUrl;
@@ -29,24 +32,17 @@ export function middleware(request: NextRequest) {
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
 
-  if (pathnameHasLocale) return;
+  if (pathnameHasLocale) return NextResponse.next();
 
-  // Redirect if there is no locale
   const locale = getLocale(request);
   request.nextUrl.pathname = `/${locale}${pathname}`;
-  // e.g. incoming request is /products
-  // The new URL is now /en-US/products
   const response = NextResponse.redirect(request.nextUrl);
-  // Set locale to cookie
   response.cookies.set(cookieName, locale);
   return response;
 }
 
 export const config = {
   matcher: [
-    // Skip all internal paths (_next)
-    "/((?!_next).*)",
-    // Optional: only run on root (/) URL
-    // '/'
+    "/((?!_next|flags).*)"  // Exclure les chemins _next et flags
   ],
 };

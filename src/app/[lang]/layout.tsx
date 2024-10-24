@@ -17,16 +17,20 @@ export async function generateStaticParams() {
   return [{ lang: "en" }, { lang: "zh" }];
 }
 
-export default function RootLayout({
-  children,
-  params,
-}: Readonly<{
-  children: React.ReactNode;
-  params: LangParams;
-}>) {
+export default async function RootLayout(
+  props: Readonly<{
+    children: React.ReactNode;
+    params: LangParams;
+  }>
+) {
+
+  const {
+    children
+  } = props;
+
   return (
-    <html lang={params.lang}>
-      <body className={inter.className}>{children}</body>
+    <html suppressHydrationWarning={true}>
+      <body className={inter.className} data-cz-shortcut-listen="true">{children}</body>
     </html>
   );
 }

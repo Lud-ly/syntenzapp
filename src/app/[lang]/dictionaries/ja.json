@@ -1,0 +1,12 @@
+{
+  "page": {
+    "language": "ja",
+    "title": "DevOpsの紹介",
+    "desc": "DevOpsの文化と現代のソフトウェア開発における重要性を理解する。"
+  },
+  "home": {
+    "language": "ja",
+    "title": "DevOpsへようこそ",
+    "desc": "これはDevOpsの紹介の例です。"
+  }
+}

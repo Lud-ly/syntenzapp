@@ -1,10 +1,12 @@
 {
   "page": {
-    "title": "Next.js i18n 示例",
-    "desc": "搞懂 Next.js 实现 i18n 国际化多语言(基于App Router)"
+    "language": "zh",
+    "title": "DevOps 介绍",
+    "desc": "理解 DevOps 文化及其在现代软件开发中的重要性。"
   },
   "home": {
-    "title": "你好, Next.js i18n",
-    "desc": "这是一个 Next.js i18n 示例"
+    "language": "zh",
+    "title": "欢迎来到 DevOps",
+    "desc": "这是一个 DevOps 介绍示例。"
   }
 }

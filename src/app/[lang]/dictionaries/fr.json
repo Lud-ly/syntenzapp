@@ -1,0 +1,12 @@
+{
+  "page": {
+    "language": "fr",
+    "title": "Introduction au DevOps",
+    "desc": "Comprendre la culture DevOps et son importance dans le développement logiciel moderne."
+  },
+  "home": {
+    "language": "fr",
+    "title": "Bienvenue dans DevOps",
+    "desc": "Ceci est un exemple d'introduction à DevOps."
+  }
+}
