@@ -13,24 +13,27 @@ interface LangParams {
   lang: string;
 }
 
+// Assurez-vous que cette fonction retourne des paramètres valides
 export async function generateStaticParams() {
-  return [{ lang: "en" }, { lang: "zh" }];
+  return [
+    { lang: "en" },
+    { lang: "zh" }
+  ];
 }
 
-export default async function RootLayout(
-  props: Readonly<{
-    children: React.ReactNode;
-    params: LangParams;
-  }>
-) {
-
-  const {
-    children
-  } = props;
+// Mettez à jour la signature de la fonction pour le type `LayoutProps` correct
+export default async function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+  params: LangParams; // Assurez-vous que params correspond à LangParams
+}) {
 
   return (
     <html suppressHydrationWarning={true}>
-      <body className={inter.className} data-cz-shortcut-listen="true">{children}</body>
+      <body className={inter.className} data-cz-shortcut-listen="true">
+        {children}
+      </body>
     </html>
   );
 }
