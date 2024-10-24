@@ -21,7 +21,7 @@ const languages: LanguageFlag[] = [
 
 export function LanguageSwitcher({ currentLang }: { currentLang: string }) {
   return (
-    <div className="space-x-2 flex items-center bg-teal-950 p-3 rounded">
+    <div className="flex items-center bg-teal-950 p-3 rounded">
       {languages.map((lang, index) => (
         <>
           <Link 
@@ -29,7 +29,7 @@ export function LanguageSwitcher({ currentLang }: { currentLang: string }) {
             key={lang.code}
             className={`transition-transform duration-200 hover:scale-110 ${
               currentLang === lang.code 
-                ? 'ring-4 ring-steal-500 rounded-full transform scale-130' 
+                ? 'ring-4 ring-teal-500 rounded-full transform scale-110' 
                 : 'opacity-70 hover:opacity-100'
             }`}
           >
@@ -38,7 +38,7 @@ export function LanguageSwitcher({ currentLang }: { currentLang: string }) {
               alt={lang.alt}
               width={48}
               height={48}
-              className="inline-block"
+              className="inline-block mx-4"
             />
           </Link>
           {index < languages.length - 1 && <span className="text-gray-400">|</span>}
