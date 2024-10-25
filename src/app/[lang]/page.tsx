@@ -84,7 +84,7 @@ export default async function Home(
       {/* Contenu principal */}
       <main className="flex-grow">
         <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
-          <h1 className="text-4xl font-bold text-white mb-4">
+          <h1 className="text-4xl font-bold mb-4">
             {t.home.title}
           </h1>
           <div className="prose dark:prose-invert max-w-none text-lg font-bold">
