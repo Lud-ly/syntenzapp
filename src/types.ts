@@ -5,13 +5,29 @@ export type Locale = 'en' | 'zh'| 'de'| 'es'| 'fr'| 'ja'| 'pt';
 export interface PageDictionary {
   language: string;
   title: string;
-  desc: string;
+  subtitle: string;
+  paragraph: string;
+  paragraph2: string;
+  paragraph3: string;
+  paragraph4: string;
+  paragraph5: string;
+  paragraph6: string;
+  paragraph7: string;
+  conclusion: string;
 }
 
 export interface HomeDictionary {
   language: string;
   title: string;
-  desc: string;
+    subtitle: string;
+  paragraph: string;
+  paragraph2: string;
+  paragraph3: string;
+  paragraph4: string;
+  paragraph5: string;
+  paragraph6: string;
+  paragraph7: string;
+  conclusion: string;
 }
 
 export interface Dictionary {

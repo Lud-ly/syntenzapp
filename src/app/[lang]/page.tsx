@@ -16,7 +16,7 @@ export async function generateMetadata(
   return {
     language: t.page.language,
     title: t.page.title,
-    description: t.page.desc,
+    description: t.page.subtitle,
   };
 }
 
@@ -36,7 +36,7 @@ export default async function Home(
         {t.home.title}
       </p>
       <p>{t.home.language}</p>
-      <p>{t.home.desc}</p>
+      <p>{t.home.subtitle}</p>
     </main>
   );
 }
