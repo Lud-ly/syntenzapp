@@ -87,9 +87,6 @@ export default async function Home(
           <h1 className="text-4xl font-bold text-white mb-4">
             {t.home.title}
           </h1>
-          <p className="text-xl text-white/90">
-            {t.home.language}
-          </p>
           <div className="prose dark:prose-invert max-w-none text-lg font-bold">
            
             <blockquote>
