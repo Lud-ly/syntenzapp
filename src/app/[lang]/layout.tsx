@@ -15,9 +15,12 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
- 
+
   return (
     <html suppressHydrationWarning={true}>
+      <head>
+        <link rel="icon" href="/images/logo.webp" />
+      </head>
       <body className={inter.className} data-cz-shortcut-listen="true">
         {children}
       </body>

@@ -40,11 +40,10 @@ export function LanguageSwitcher({ currentLang }: { currentLang: string }) {
         <Image
           src={`/flags/${currentLanguage?.code}.svg`}
           alt={currentLanguage?.alt || ''}
-          width={24}
-          height={24}
-          className="rounded-full"
+          width={48}
+          height={48}
+          //className="rounded-full"
         />
-        {/* <span className="hidden sm:inline ml-2">{currentLanguage?.label}</span> */}
         <ChevronDown 
           className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
         />
